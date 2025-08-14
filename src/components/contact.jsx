@@ -9,11 +9,8 @@ export const Contact = (props) => {
           <div className="col-md-6">
             <div className="row">
               <div className="section-title">
-                <h2>Naša lokalizácia</h2>
-                <p>
-                  Nájdite nás na mape. Kliknite na značku pre otvorenie v Google
-                  Maps.
-                </p>
+                <h2>Nájdite nás na mape</h2>
+                <p>Kliknite na značku pre otvorenie v Google Maps.</p>
               </div>
               <MyMap />
             </div>
@@ -63,7 +60,7 @@ export const Contact = (props) => {
       </div>
       <div id="footer">
         <div className="container text-center">
-          <p>&copy; 2025 QTrucking Slovensko</p>
+          <p>&copy; 2025 Q-Trucking Slovensko</p>
         </div>
       </div>
     </div>
