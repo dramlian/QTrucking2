@@ -227,6 +227,7 @@ a:focus,
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+  overflow-x: hidden;
 }
 .intro .overlay {
   background: rgba(0, 0, 0, 0.2);
@@ -407,6 +408,7 @@ header .intro-text {
 .hover-bg:hover .hover-text > h4 {
   opacity: 1;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
@@ -617,5 +619,88 @@ label {
 @media (max-width: 768px) {
   #about img {
     margin: 50px 0;
+  }
+  
+  /* Make navbar brand responsive on mobile */
+  #menu a.navbar-brand {
+    font-size: 20px;
+
+  }
+  
+  /* Fix header overflow on mobile */
+  .intro h1 {
+    font-size: 48px;
+  }
+  
+  header .intro-text {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .intro p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 40px;
+  }
+}
+
+/* Additional responsive breakpoint for very small screens */
+@media (max-width: 480px) {
+  #menu a.navbar-brand {
+    font-size: 18px;
+  }
+  
+  /* Header adjustments for small phones */
+  .intro h1 {
+    font-size: 36px;
+  }
+  
+  header .intro-text {
+    padding-top: 150px;
+    padding-bottom: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .intro p {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 30px;
+  }
+  
+  .btn-custom {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  #menu a.navbar-brand {
+    font-size: 16px;
+  }
+  
+  /* Header adjustments for very small phones */
+  .intro h1 {
+    font-size: 28px;
+  }
+  
+  header .intro-text {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  
+  .intro p {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .btn-custom {
+    padding: 10px 20px;
+    font-size: 13px;
   }
 }
