@@ -55,7 +55,7 @@ export const Contact = (props) => {
                 <span>
                   <i className="fa fa-globe"></i> {t.web}
                 </span>
-                www.q-trucking.sk
+                www.q-trucking.eu
               </p>
             </div>
           </div>
