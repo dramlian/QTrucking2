@@ -1,4 +1,18 @@
+import Flag from "react-world-flags";
+import { translations } from "../translations";
+
 export const Navigation = (props) => {
+  const { language = "sk", setLanguage } = props;
+  const t = translations[language] || translations.sk;
+
+  // Handle case where setLanguage is not provided
+  const handleLanguageChange = (newLanguage) => {
+    if (setLanguage && typeof setLanguage === "function") {
+      setLanguage(newLanguage);
+    } else {
+      console.warn("setLanguage function not provided to Navigation component");
+    }
+  };
   return (
     <nav id="menu" className="navbar navbar-default navbar-fixed-top">
       <div className="container">
@@ -16,7 +30,7 @@ export const Navigation = (props) => {
             <span className="icon-bar"></span>{" "}
           </button>
           <a className="navbar-brand page-scroll" href="#page-top">
-            Q-Trucking-Slovensko
+            {t.brandName}
           </a>
         </div>
 
@@ -27,13 +41,41 @@ export const Navigation = (props) => {
           <ul className="nav navbar-nav navbar-right">
             <li>
               <a href="#about" className="page-scroll">
-                O nás
+                {t.aboutCompany}
               </a>
             </li>
             <li>
               <a href="#contact" className="page-scroll">
-                Kontakt
+                {t.contact}
               </a>
+            </li>
+            <li className="navbar-text">
+              <div className="language-switcher">
+                <button
+                  className={`btn ${language === "sk" ? "active" : ""}`}
+                  onClick={() => handleLanguageChange("sk")}
+                >
+                  <Flag code="SK" style={{ width: 20 }} />
+                </button>
+                <button
+                  className={`btn ${language === "en" ? "active" : ""}`}
+                  onClick={() => handleLanguageChange("en")}
+                >
+                  <Flag code="GB" style={{ width: 20 }} />
+                </button>
+                <button
+                  className={`btn ${language === "nl" ? "active" : ""}`}
+                  onClick={() => handleLanguageChange("nl")}
+                >
+                  <Flag code="NL" style={{ width: 20 }} />
+                </button>
+                <button
+                  className={`btn ${language === "fr" ? "active" : ""}`}
+                  onClick={() => handleLanguageChange("fr")}
+                >
+                  <Flag code="FR" style={{ width: 20 }} />
+                </button>
+              </div>
             </li>
           </ul>
         </div>

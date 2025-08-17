@@ -1,6 +1,9 @@
 import React from "react";
+import { translations } from "../translations";
 
 export const Header = (props) => {
+  const { language = "sk" } = props;
+  const t = translations[language] || translations.sk;
   return (
     <header id="header">
       <div className="intro">
@@ -9,7 +12,7 @@ export const Header = (props) => {
             <div className="row">
               <div className="col-md-8 col-md-offset-2 intro-text">
                 <h1>
-                  {props.data ? props.data.title : "Loading"}
+                  {t.heroTitle}
                   <span></span>
                 </h1>
                 <a
@@ -18,7 +21,7 @@ export const Header = (props) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Prepravný poriadok
+                  {t.transportRegulations}
                 </a>{" "}
               </div>
             </div>

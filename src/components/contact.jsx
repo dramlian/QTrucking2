@@ -1,7 +1,10 @@
 import React from "react";
 import MyMap from "./MyMap";
+import { translations } from "../translations";
 
 export const Contact = (props) => {
+  const { language = "sk" } = props;
+  const t = translations[language] || translations.sk;
   return (
     <div>
       <div id="contact">
@@ -9,8 +12,8 @@ export const Contact = (props) => {
           <div className="col-md-6">
             <div className="row">
               <div className="section-title">
-                <h2>Nájdite nás na mape</h2>
-                <p>Kliknite na značku pre otvorenie v Google Maps.</p>
+                <h2>{t.findUsOnMap}</h2>
+                <p>{t.clickMarkerForMaps}</p>
               </div>
               <MyMap />
             </div>
@@ -19,7 +22,7 @@ export const Contact = (props) => {
             <div className="contact-item">
               <p>
                 <span>
-                  <i className="fa fa-map-marker"></i> Adresa
+                  <i className="fa fa-map-marker"></i> {t.address}
                 </span>
                 Rastislavova 106 Košice Slovenská republika 042 04
               </p>
@@ -34,7 +37,7 @@ export const Contact = (props) => {
             <div className="contact-item">
               <p>
                 <span>
-                  <i className="fa fa-phone"></i> Tel
+                  <i className="fa fa-phone"></i> {t.tel}
                 </span>
                 00421 55 7291240
               </p>
@@ -42,7 +45,7 @@ export const Contact = (props) => {
             <div className="contact-item">
               <p>
                 <span>
-                  <i className="fa fa-envelope-o"></i> Email
+                  <i className="fa fa-envelope-o"></i> {t.email}
                 </span>
                 info@q-trucking.sk
               </p>
@@ -50,7 +53,7 @@ export const Contact = (props) => {
             <div className="contact-item">
               <p>
                 <span>
-                  <i className="fa fa-globe"></i> Web
+                  <i className="fa fa-globe"></i> {t.web}
                 </span>
                 www.q-trucking.sk
               </p>
@@ -60,7 +63,7 @@ export const Contact = (props) => {
       </div>
       <div id="footer">
         <div className="container text-center">
-          <p>&copy; 2025 Q-Trucking Slovensko</p>
+          <p>{t.copyright}</p>
         </div>
       </div>
     </div>

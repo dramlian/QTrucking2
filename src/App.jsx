@@ -13,16 +13,18 @@ export const scroll = new SmoothScroll('a[href*="#"]', {
 
 const App = () => {
   const [landingPageData, setLandingPageData] = useState({});
+  const [language, setLanguage] = useState("sk"); // Default to Slovak
+
   useEffect(() => {
     setLandingPageData(JsonData);
   }, []);
 
   return (
     <div style={{ backgroundColor: "#1a1a1a", minHeight: "100vh" }}>
-      <Navigation />
-      <Header data={landingPageData.Header} />
-      <About data={landingPageData.About} />
-      <Contact data={landingPageData.Contact} />
+      <Navigation language={language} setLanguage={setLanguage} />
+      <Header language={language} data={landingPageData.Header} />
+      <About language={language} data={landingPageData.About} />
+      <Contact language={language} data={landingPageData.Contact} />
     </div>
   );
 };

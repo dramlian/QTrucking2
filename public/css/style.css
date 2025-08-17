@@ -616,6 +616,42 @@ label {
   border-bottom: 2px solid #f1c40f;
 }
 
+/* Language Switcher Styles */
+.language-switcher {
+  margin-left: 20px;
+}
+
+.language-switcher .btn {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: #e0e0e0;
+  padding: 6px 12px;
+  margin: 0 2px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.language-switcher .btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #f1c40f;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.language-switcher .btn.active {
+  background: linear-gradient(to right, #f1c40f 0%, #f39c12 100%);
+  border-color: #f1c40f;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(241, 196, 15, 0.3);
+}
+
+.language-switcher .btn:focus,
+.language-switcher .btn:active {
+  box-shadow: 0 0 0 0.2rem rgba(241, 196, 15, 0.25);
+  outline: none;
+}
+
 @media (max-width: 768px) {
   #about img {
     margin: 50px 0;
@@ -643,6 +679,15 @@ label {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 40px;
+  }
+  
+  .language-switcher {
+    margin-left: 10px;
+  }
+  
+  .language-switcher .btn {
+    padding: 4px 8px;
+    margin: 0 1px;
   }
 }
 
