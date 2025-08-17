@@ -38,17 +38,7 @@ export const Navigation = (props) => {
           className="collapse navbar-collapse"
           id="bs-example-navbar-collapse-1"
         >
-          <ul className="nav navbar-nav navbar-right">
-            <li>
-              <a href="#about" className="page-scroll">
-                {t.aboutCompany}
-              </a>
-            </li>
-            <li>
-              <a href="#contact" className="page-scroll">
-                {t.contact}
-              </a>
-            </li>
+          <ul className="nav navbar-nav navbar-center">
             <li className="navbar-text">
               <div className="language-switcher">
                 <button
@@ -76,6 +66,18 @@ export const Navigation = (props) => {
                   <Flag code="FR" style={{ width: 20 }} />
                 </button>
               </div>
+            </li>
+          </ul>
+          <ul className="nav navbar-nav navbar-right">
+            <li>
+              <a href="#about" className="page-scroll">
+                {t.aboutCompany}
+              </a>
+            </li>
+            <li>
+              <a href="#contact" className="page-scroll">
+                {t.contact}
+              </a>
             </li>
           </ul>
         </div>

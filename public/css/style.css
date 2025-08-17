@@ -616,6 +616,68 @@ label {
   border-bottom: 2px solid #f1c40f;
 }
 
+/* Navigation Layout Improvements */
+.navbar-nav.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  float: none;
+  margin: 0;
+}
+
+.navbar-nav.navbar-center .navbar-text {
+  padding: 10px 0;
+  margin: 0;
+  line-height: 1;
+}
+
+.navbar-nav.navbar-center li {
+  float: none;
+  display: inline-block;
+}
+
+/* Ensure proper vertical alignment */
+.navbar-nav > li > a,
+.navbar-nav > li > .navbar-text {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
+}
+
+/* Language switcher adjustments for centered layout */
+.navbar-center .language-switcher {
+  margin-left: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.navbar-center .language-switcher .btn {
+  vertical-align: middle;
+  margin: 0 1px;
+  padding: 4px 8px;
+}
+
+/* Ensure proper spacing on mobile */
+@media (max-width: 767px) {
+  .navbar-nav.navbar-center {
+    position: static;
+    transform: none;
+    float: none;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .navbar-nav.navbar-right {
+    float: none;
+    text-align: center;
+  }
+  
+  .navbar-nav.navbar-right li {
+    float: none;
+    display: inline-block;
+  }
+}
+
 /* Language Switcher Styles */
 .language-switcher {
   margin-left: 20px;
