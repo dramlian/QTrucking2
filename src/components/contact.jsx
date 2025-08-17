@@ -39,7 +39,7 @@ export const Contact = (props) => {
                 <span>
                   <i className="fa fa-phone"></i> {t.tel}
                 </span>
-                00421 55 7291240
+                +421915648006
               </p>
             </div>
             <div className="contact-item">
